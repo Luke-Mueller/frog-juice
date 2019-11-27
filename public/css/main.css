@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.main-header__linkList {
+  display: flex;
+  list-style: none;
+}
+
+.main-header__listItem {
+  margin: 1.5rem;
+}
+
+.main-header__listItem a {
+  text-decoration: none;
+  color: #999999
+}
+
+.main-header__listItem a:hover,
+.main-header__listItem a:active,
+.main-header__listItem a.active {
+  color: #4e034e;
+}
