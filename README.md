@@ -1,6 +1,6 @@
 This is an online store of 'frog juice'. This mystical panacea, collected from the most exotic and prestine sites around the world, is a complete figment of my imagination. I used it as the concept behind my very first HTML page years ago.  Now the concept returns, and this time as an online store!  
 
-Below I will maintain a list of features the store employs.
+Below I will maintain a 'Features and Techs' list of features the store employs.
 
 
 To view the store:
@@ -20,3 +20,9 @@ To view the store:
 Enjoy!
 
 * Very few frogs were harmed during the production of this site.
+
+
+Features and Techs:
+
+express.js
+nodemon
