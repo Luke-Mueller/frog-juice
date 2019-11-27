@@ -19,10 +19,10 @@ To view the store:
 
 Enjoy!
 
-* Very few frogs were harmed during the production of this site.
+*** Very few frogs were harmed during the production of this site ***
 
 
 Features and Techs:
 
-express.js
+express.js,
 nodemon
