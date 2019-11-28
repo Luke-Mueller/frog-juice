@@ -11,18 +11,18 @@ To view the store:
 4. run 'npm start'
 5. open 'localhost:3000' in your preferred web browser
       
-      *** if you prefer using a different port, 
-      you can open the 'app.js' file and replace 
+      *** if you want to use a different port, 
+      simply open the 'app.js' file and replace 
       3000 in 'app.listen(3000)' with the 
-      port you prefer ***
-
+      port you would like ***
 
 Enjoy!
 
-*** Very few frogs were harmed during the production of this site ***
+
+*** Practically no frogs were harmed during the production of this site ***
 
 
 Features and Techs:
 
-express.js,
-nodemon
+* express.js,
+* nodemon
