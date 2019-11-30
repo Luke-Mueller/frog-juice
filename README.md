@@ -25,4 +25,5 @@ Enjoy!
 Features and Techs:
 
 * express.js,
-* nodemon
+* nodemon,
+* ejs templating engine
