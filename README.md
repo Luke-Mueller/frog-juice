@@ -1,8 +1,6 @@
 This is an online store of 'frog juice'. This mystical panacea, collected from the most exotic and prestine sites around the world, is a complete figment of my imagination. I used it as the concept behind my very first HTML page years ago.  Now the concept returns, and this time as an online store!  
 
 Below I will maintain a 'Features and Techs' list of features the store employs.
-
-
 To view the store:
 
 1. open the 'frog_juice' folder in your preferred IDE
@@ -24,6 +22,7 @@ Enjoy!
 
 Features and Techs:
 
-* express.js,
-* nodemon,
+* express.js
+* nodemon
 * ejs templating engine
+* mvs design pattern
