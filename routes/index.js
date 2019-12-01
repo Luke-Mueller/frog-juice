@@ -1,12 +1,11 @@
 const express = require('express');
 
+const indexController = require('../controllers/index');
+
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  res.render('index', { 
-    pageTitle: 'Frog Juice',
-    path: '/'
-  });
-});
+router.get('/', indexController.getIndex);
+
+router.post
 
 module.exports = router;

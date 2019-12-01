@@ -1,12 +1,9 @@
 const express = require('express');
 
+const storyController = require('../controllers/story');
+
 const router = express.Router();
 
-router.get('/story', (req, res, next) => {
-  res.render('story', { 
-    pageTitle: 'Frog Juice the Story',
-    path: '/story'
-  });
-});
+router.get('/story', storyController.getStory);
 
 module.exports = router;
