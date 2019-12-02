@@ -13,18 +13,21 @@ exports.getCheckout = (req, res, next) => {
     path: '/checkout'
   });
 }
+
 exports.getIndex = (req, res, next) => {
   res.render('shop/index', { 
     pageTitle: 'Frog Juice the Shop',
     path: '/'
   });
 }
+
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', { 
     pageTitle: 'Your Orders',
     path: '/orders'
   });
 }
+
 exports.getProducts = (req, res, next) => {
   Product.fetchAll(products => {
     res.render('shop/product-list', { 
@@ -33,4 +36,10 @@ exports.getProducts = (req, res, next) => {
       prods: products
     });
   });
+}
+
+exports.getProduct = (req, res, next) => {
+  const prodId = req.params.productId;
+  console.log(prodId);
+  res.redirect('/');
 }

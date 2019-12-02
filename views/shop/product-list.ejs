@@ -5,30 +5,31 @@
 <%- include('../includes/navigation.ejs')%>
 
   <main>
-    <br>
-    <h1>Products</h1>
-    <br>
-    <div class="grid">
-      <% for(let product of prods) { %>
-        <article class="card product-item">
-          <header class="card__header">
-            <h1 class="product-name"><%= product.title %></h1>
-          </header>
-          <div class="card__image">
-            <img src="<%= product.imageUrl %>" alt="Frog">
-          </div>
-          <div class="card__content">
-            <h5 class="product__price"><%= product.price %>usd</h5>
-          </div>
-          <div class="card__actions">
-            <a href="/products/<%= product.id %>"></a>
-            <form action="">
-              <button class="btn">Add to cart</button>
-            </form>
-          </div>
-        </article>
-      <% } %>
-    </div>
+    <% if (prods.length > 0) { %>
+      <div class="grid">
+        <% for(let product of prods) { %>
+          <article class="card product-item">
+            <header class="card__header">
+              <h1 class="product-name"><%= product.title %></h1>
+            </header>
+            <div class="card__image">
+              <img src="<%= product.imageUrl %>" alt="Frog">
+            </div>
+            <div class="card__content">
+              <h5 class="product__price"><%= product.price %>usd</h5>
+            </div>
+            <div class="card__actions">
+              <a href="/products/<%= product.id %>" class="btn">Details</a>
+              <form action="">
+                <button class="btn">Add to cart</button>
+              </form>
+            </div>
+          </article>
+        <% } %>
+      </div>
+    <% } else { %>
+      <h2>No Products Found</h2>
+    <% } %>
   </main>
   
 <%- include('../includes/end.ejs') %>

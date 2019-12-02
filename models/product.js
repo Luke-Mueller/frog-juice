@@ -33,4 +33,8 @@ module.exports = class Product {
   static fetchAll = cb => {
     getProductsFromFile(cb);
   }
+
+  // static fetchById = cb => {
+
+  // }
 }
