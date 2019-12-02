@@ -30,11 +30,14 @@ module.exports = class Product {
     });
   }
 
-  static fetchAll = cb => {
+  static fetchAll(cb) {
     getProductsFromFile(cb);
   }
 
-  // static fetchById = cb => {
-
-  // }
+  static findById(id, cb) {
+    getProductsFromFile(products => {
+      const product = products.find(prod => prod.id === id);
+      cb(product)
+    })
+  }
 }
