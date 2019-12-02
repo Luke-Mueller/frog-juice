@@ -18,9 +18,7 @@
           <h5 class="product__price"><%= product.price %>usd</h5>
         </div>
         <div class="card__actions">
-          <form action="/cart" method="POST">
-            <button class="btn">Add to Cart</button>
-          </form>
+            <%- include('../includes/add-to-cart.ejs') %>
         </div>
       </article>
     </div>
