@@ -22,7 +22,8 @@ Enjoy!
 
 Features and Techs:
 
+* node.js
 * express.js
 * nodemon
 * ejs templating engine
-* mvs design pattern
+* mvc design pattern
