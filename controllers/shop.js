@@ -44,12 +44,12 @@ exports.getCheckout = (req, res, next) => {
 }
 
 exports.getIndex = (req, res, next) => {
-  Product.fetchAll()
-    .then(([rows, fieldData]) => {
+  Product.findAll()
+    .then(products => {
       res.render('shop/index', { 
         pageTitle: 'Frog Juice the Shop',
         path: '/',
-        prods: rows
+        prods: products
       });
     })
     .catch(err => console.log(err));
@@ -63,12 +63,12 @@ exports.getOrders = (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
-  Product.fetchAll()
-    .then(([rows, fieldData]) => {
+    Product.findAll()
+    .then(products => {
       res.render('shop/product-list', { 
         pageTitle: 'Frog Juice the Products',
         path: '/products',
-        prods: rows
+        prods: products
       });
     })
     .catch(err => console.log(err));
@@ -76,12 +76,12 @@ exports.getProducts = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
-  Product.findById(prodId)
-    .then(([product]) => {
+  Product.findByPk(prodId)
+    .then((product) => {
       res.render('shop/product-detail', {
         pageTitle: product.title,
         path: '/products',
-        product: product[0]
+        product: product
       });
     })
     .catch(err => console.log(err));
