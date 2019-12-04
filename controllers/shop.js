@@ -44,14 +44,16 @@ exports.getCheckout = (req, res, next) => {
 }
 
 exports.getIndex = (req, res, next) => {
-  Product.fetchAll(products => {
-    res.render('shop/index', { 
-      pageTitle: 'Frog Juice the Shop',
-      path: '/',
-      prods: products
-    });
-  });
-}
+  Product.fetchAll()
+    .then(([rows, fieldData]) => {
+      res.render('shop/index', { 
+        pageTitle: 'Frog Juice the Shop',
+        path: '/',
+        prods: rows
+      });
+    })
+    .catch(err => console.log(err));
+};
 
 exports.getOrders = (req, res, next) => {
   res.render('shop/orders', { 
@@ -61,13 +63,15 @@ exports.getOrders = (req, res, next) => {
 }
 
 exports.getProducts = (req, res, next) => {
-  Product.fetchAll(products => {
-    res.render('shop/product-list', { 
-      pageTitle: 'Frog Juice the Products',
-      path: '/products',
-      prods: products
-    });
-  });
+  Product.fetchAll()
+    .then(([rows, fieldData]) => {
+      res.render('shop/product-list', { 
+        pageTitle: 'Frog Juice the Products',
+        path: '/products',
+        prods: rows
+      });
+    })
+    .catch(err => console.log(err));
 }
 
 exports.getProduct = (req, res, next) => {
