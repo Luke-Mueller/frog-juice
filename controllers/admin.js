@@ -81,7 +81,7 @@ exports.postDeleteProduct = (req, res, next) => {
       console.log('product annihilated')
       res.redirect('/admin/products');
     })
-    .catch();
+    .catch(err => console.log(err));
 };
 
 exports.getProducts = (req, res, next) => {
@@ -92,7 +92,7 @@ exports.getProducts = (req, res, next) => {
           path: '/admin/products',
           pageTitle: 'Admin Products',
           prods: products,
+        })
       })
       .catch(err => console.log(err));
-  });
 };

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
 * {
   box-sizing: border-box;
 }
@@ -7,7 +5,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: sans-serif;
 }
 
 main {
@@ -23,10 +21,18 @@ form {
   text-align: center;
 }
 
+.image {
+  height: 20rem;
+}
+
+.image img {
+  height: 100%;
+}
+
 .main-header {
   width: 100%;
   height: 3.5rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;  
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
@@ -52,13 +58,13 @@ form {
 
 .main-header__item a {
   text-decoration: none;
-  color: rgb(199, 199, 199);
+  color: #888888;
 }
 
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #64084d;
+  color: #580258;
 }
 
 .mobile-nav {
@@ -194,6 +200,17 @@ form {
 .btn:hover,
 .btn:active {
   background-color: #00695c;
+  color: white;
+}
+
+.btn.danger {
+  color: red;
+  border-color: red;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+  background: red;
   color: white;
 }
 
