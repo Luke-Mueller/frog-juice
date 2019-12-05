@@ -29,3 +29,5 @@ Features and Techs:
 * mvc design pattern
 * mysql
 * sequelize
+
+I am building a noSQL version with MongoDB. 
